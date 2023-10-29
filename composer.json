@@ -1,0 +1,30 @@
+{
+    "name": "varandas/epic-free-games",
+    "description": "A small PHP package designed to facilitate interactions with the Epic Games Store API, enabling developers to retrieve details about the currently available free games.",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "ext-json": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Varandas\\EpicFreeGames\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andre",
+            "email": "andre.m.varandas@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^2.24",
+        "mockery/mockery": "^1.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
