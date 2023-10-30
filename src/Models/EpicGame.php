@@ -4,28 +4,28 @@ namespace Varandas\EpicFreeGames\Models;
 
 class EpicGame
 {
-    public string $title;
-    public string $id;
-    public string $namespace;
-    public string $description;
-    public string $effectiveDate;
-    public string $offerType;
-    public ?string $expiryDate;
-    public string $viewableDate;
-    public string $status;
-    public bool $isCodeRedemptionOnly;
-    public array $keyImages;
-    public array $seller;
-    public ?string $productSlug;
-    public ?string $urlSlug;
-    public array $items;
-    public array $customAttributes;
-    public array $categories;
-    public array $tags;
-    public array $catalogNs;
-    public array $offerMappings;
-    public array $price;
-    public array $promotions;
+    private string $title;
+    private string $id;
+    private string $namespace;
+    private string $description;
+    private string $effectiveDate;
+    private string $offerType;
+    private ?string $expiryDate;
+    private string $viewableDate;
+    private string $status;
+    private bool $isCodeRedemptionOnly;
+    private array $keyImages;
+    private array $seller;
+    private ?string $productSlug;
+    private ?string $urlSlug;
+    private array $items;
+    private array $customAttributes;
+    private array $categories;
+    private array $tags;
+    private array $catalogNs;
+    private array $offerMappings;
+    private array $price;
+    private array $promotions;
 
     public function __construct(array $data)
     {
@@ -51,5 +51,115 @@ class EpicGame
         $this->offerMappings = $data['offerMappings'];
         $this->price = $data['price'];
         $this->promotions = $data['promotions'] ?? [];
+    }
+
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    public function getNamespace(): string
+    {
+        return $this->namespace;
+    }
+
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    public function getEffectiveDate(): string
+    {
+        return $this->effectiveDate;
+    }
+
+    public function getOfferType(): string
+    {
+        return $this->offerType;
+    }
+
+    public function getExpiryDate(): ?string
+    {
+        return $this->expiryDate;
+    }
+
+    public function getViewableDate(): string
+    {
+        return $this->viewableDate;
+    }
+
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
+
+    public function isCodeRedemptionOnly(): bool
+    {
+        return $this->isCodeRedemptionOnly;
+    }
+
+    public function getKeyImages(): array
+    {
+        return $this->keyImages;
+    }
+
+    public function getSeller(): array
+    {
+        return $this->seller;
+    }
+
+    public function getProductSlug(): ?string
+    {
+        return $this->productSlug;
+    }
+
+    public function getUrlSlug(): ?string
+    {
+        return $this->urlSlug;
+    }
+
+    public function getItems(): array
+    {
+        return $this->items;
+    }
+
+    public function getCustomAttributes(): array
+    {
+        return $this->customAttributes;
+    }
+
+    public function getCategories(): array
+    {
+        return $this->categories;
+    }
+
+    public function getTags(): array
+    {
+        return $this->tags;
+    }
+
+    public function getCatalogNs(): array
+    {
+        return $this->catalogNs;
+    }
+
+    public function getOfferMappings(): array
+    {
+        return $this->offerMappings;
+    }
+
+    public function getPrice(): array
+    {
+        return $this->price;
+    }
+
+    public function getPromotions(): array
+    {
+        return $this->promotions;
     }
 }
